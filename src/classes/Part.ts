@@ -1,6 +1,10 @@
+interface Coordinate {
+  x: number;
+  y: number;
+}
+
 export interface Part {
   getHeight(): number;
   getWidth(): number;
-  getX(): number;
-  getY(): number;
+  getCoordinate(): Coordinate;
 }
