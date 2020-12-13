@@ -1,5 +1,5 @@
 import React from "react";
-import { Canvas, Panel } from "components";
+import { Canvas, Panel, Button } from "components";
 /** @jsx jsx */ import { jsx, css, Global } from "@emotion/core";
 
 const App: React.FC = () => {
