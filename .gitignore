@@ -241,3 +241,5 @@ sketch
 
 .eslintcache
 .cache
+.idea/
+build/
