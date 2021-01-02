@@ -18,8 +18,10 @@ const PanelItem: React.FC<PanelItemProps> = ({ category, sources }) => {
 
   useEffect(
     () => {
-      store.selectedIndex[category] = index;
-      setCurrentStore({ ...store });
+      if (store.ref) {
+        store.selectedIndex[category] = index;
+        setCurrentStore({ ...store });
+      }
     },
     [index],
   );
