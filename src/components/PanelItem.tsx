@@ -1,11 +1,7 @@
-import React from "react";
-interface PanelItemProps {
-  category: string;
-  //previews: Preview[];
-}
+import React from 'react';
 
-const PanelItem: React.FC<PanelItemProps> = ({ category }) => {
-  return <h1>{category}</h1>;
+const PanelItem: React.FC = () => {
+  return <></>;
 };
 
 export default PanelItem;
