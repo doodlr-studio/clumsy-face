@@ -1,21 +1,18 @@
 import React from 'react';
 import PanelItem from './PanelItem';
-import { Enums, Sources } from '../constants';
+import Sources from './Sources';
+import { Enums } from '../constants';
 
 const Panel: React.FC = () => {
   return (
     <>
       <PanelItem
-        category={Enums.CHARACTER_PROPERTY.Eyes}
-        sources={Sources.EYES_LIST}
+        category={Enums.CHARACTER_PROPERTY.BODY}
+        sources={Sources.BODY}
       />
       <PanelItem
-        category={Enums.CHARACTER_PROPERTY.Nose}
-        sources={Sources.NOSE_LIST}
-      />
-      <PanelItem
-        category={Enums.CHARACTER_PROPERTY.Mouth}
-        sources={Sources.MOUTH_LIST}
+        category={Enums.CHARACTER_PROPERTY.HAIR}
+        sources={Sources.HAIR}
       />
     </>
   );

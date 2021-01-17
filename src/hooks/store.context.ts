@@ -15,9 +15,8 @@ export const STORE_DEFAULT_VALUE = {
   store: {
     ref: null,
     selectedIndex: {
-      eyes: 0,
-      nose: 0,
-      mouth: 0,
+      body: 0,
+      hair: 0,
     },
   },
   setCurrentStore: () => {},

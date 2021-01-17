@@ -1,7 +1,6 @@
 const CHARACTER_PROPERTY = {
-  Eyes: 'eyes',
-  Nose: 'nose',
-  Mouth: 'mouth',
+  BODY: 'body',
+  HAIR: 'hair',
 } as const;
 
 export default {

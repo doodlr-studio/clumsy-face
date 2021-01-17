@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { storeContext } from '../hooks/store.context';
+const audio = new Audio('/test.mp3');
 
 const Controller: React.FC = () => {
   const { store } = useContext(storeContext);
   const handleClick = () => {
     if (store.ref) {
+      audio.play();
+
       const base64doc = btoa(
         unescape(
           encodeURIComponent(

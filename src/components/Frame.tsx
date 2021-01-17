@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import Part from './Part';
-import { Enums, Sources } from '../constants';
+import Sources from './Sources';
 import { Size } from '../classes/Source';
 import { storeContext } from '../hooks/store.context';
 
@@ -21,25 +20,18 @@ const Frame: React.FC<Size> = ({ width, height }) => {
     <div style={{ border: '4px solid black', display: 'inline-block' }}>
       <svg
         ref={svgRef}
-        width={width}
-        height={height}
+        width={width / 3}
+        height={height / 3}
         viewBox={`0 0 ${width} ${height}`}
-        xmlns="http://www.w3.org/2000/svg"
-      >
+        xmlns="http://www.w3.org/2000/svg">
         <title>Character Frame</title>
         <desc>Doodlr Studio.</desc>
-        <Part
-          category={Enums.CHARACTER_PROPERTY.Eyes}
-          source={Sources.EYES_LIST[store.selectedIndex.eyes]}
-        />
-        <Part
-          category={Enums.CHARACTER_PROPERTY.Nose}
-          source={Sources.NOSE_LIST[store.selectedIndex.nose]}
-        />
-        <Part
-          category={Enums.CHARACTER_PROPERTY.Mouth}
-          source={Sources.MOUTH_LIST[store.selectedIndex.mouth]}
-        />
+
+        <g id="body">{Sources.BODY[store.selectedIndex.body]}</g>
+        <g id="hair">
+          <style type="text/css">{`#hair .st0{fill:#243858;}`}</style>
+          {Sources.HAIR[store.selectedIndex.hair]}
+        </g>
       </svg>
     </div>
   );
