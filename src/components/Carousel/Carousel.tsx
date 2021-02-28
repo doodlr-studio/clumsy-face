@@ -3,7 +3,7 @@ import './Carousel.scss';
 
 interface ICarousel {
   containerWidth: number;
-  itemWidth: number;
+  elementWidth: number;
   children?: React.ReactNode;
 }
 
@@ -13,53 +13,50 @@ enum DIRECTION {
 }
 
 const Carousel: React.FC<ICarousel> = ({
-  containerWidth,
-  itemWidth,
+  containerWidth: cw,
+  elementWidth: ew,
   children,
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState<number>(0);
 
-  let startOffset: number;
-
   useEffect(() => {
+    let startX: number;
+    
     function actionA(e: PointerEvent) {
       e.preventDefault();
-
-      console.log('down');
-      startOffset = e.clientX;
+      
+      startX = e.clientX;
     }
 
     function actionB(e: PointerEvent) {
       e.preventDefault();
-      console.log('up');
-      console.log('index', index);
 
-      setIndex(index + 1);
+      setIndex(index + (startX <= e.clientX ? +1 : -1 ));
     }
 
-    if (containerRef && containerRef.current) {
-      containerRef.current.addEventListener('pointerdown', actionA);
-      containerRef.current.addEventListener('pointerup', actionB);
+    if (ref && ref.current) {
+      ref.current.addEventListener('pointerdown', actionA);
+      ref.current.addEventListener('pointerup', actionB);
     }
 
     return function cleanup() {
-      if (containerRef && containerRef.current) {
-        containerRef.current.removeEventListener('pointerdown', actionA);
-        containerRef.current.removeEventListener('pointerup', actionB);
+      if (ref && ref.current) {
+        ref.current.removeEventListener('pointerdown', actionA);
+        ref.current.removeEventListener('pointerup', actionB);
       }
     };
-  }, []);
+  }, [index]);
 
   console.log(index);
 
   return (
-    <div className="carousel-container" ref={containerRef}>
+    <div className="carousel-container" ref={ref}>
       <div
         className="carousel"
         style={{
           transform: `translateX(${
-            (containerWidth - itemWidth) / 2 - index * itemWidth
+            (cw - ew) / 2 - index * ew
           }px)`,
         }}
       >

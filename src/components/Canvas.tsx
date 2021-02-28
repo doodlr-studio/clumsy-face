@@ -2,7 +2,7 @@ import React from 'react';
 import Frame from './Frame';
 
 const Canvas: React.FC = () => {
-  return <Frame width={1200} height={1200} />;
+  return <Frame width={600} height={600} />;
 };
 
 export default Canvas;

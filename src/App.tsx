@@ -10,10 +10,10 @@ const App: React.FC = () => {
   return (
     <main>
       <storeContext.Provider value={store}>
-        <Canvas />
+        {/* <Canvas />
         <Panel />
-        <Controller />
-        <Carousel containerWidth={400} itemWidth={100}>
+        <Controller /> */}
+        <Carousel containerWidth={400} elementWidth={100}>
           <li key={1} style={{ width: 100 }}>
             1
           </li>
