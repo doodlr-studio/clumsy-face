@@ -1,0 +1,19 @@
+.carousel-container {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  .carousel {
+    width: 2000px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    > * {
+      list-style: none;
+      float: left;
+      box-sizing: border-box;
+    }
+  }
+}

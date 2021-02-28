@@ -23,7 +23,8 @@ const Frame: React.FC<Size> = ({ width, height }) => {
         width={width / 3}
         height={height / 3}
         viewBox={`0 0 ${width} ${height}`}
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <title>Character Frame</title>
         <desc>Doodlr Studio.</desc>
 
