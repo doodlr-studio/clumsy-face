@@ -1,0 +1,2 @@
+.carousel-container{width:600px;height:200px;margin:0;padding:0;overflow:auto;-ms-scroll-snap-type:x mandatory;scroll-snap-type:x mandatory;border:5px solid red;-ms-overflow-style:none;scrollbar-width:none}.carousel-container::-webkit-scrollbar{display:none}.carousel-container .carousel{width:1600px;margin:0;padding:0;display:inline-block}.carousel-container .carousel>*{list-style:none;float:left;box-sizing:border-box;scroll-snap-align:center;border:1px solid #000;height:200px}
+/*# sourceMappingURL=main.70073e96.chunk.css.map */
