@@ -13,21 +13,30 @@ const App: React.FC = () => {
         {/* <Canvas />
         <Panel />
         <Controller /> */}
-        <Carousel containerWidth={400} elementWidth={100}>
-          <li key={1} style={{ width: 100 }}>
+        <Carousel containerWidth={400} elementWidth={200}>
+          <li key={1} style={{ width: 200 }}>
             1
           </li>
-          <li key={2} style={{ width: 100 }}>
+          <li key={2} style={{ width: 200 }}>
             2
           </li>
-          <li key={3} style={{ width: 100 }}>
+          <li key={3} style={{ width: 200 }}>
             3
           </li>
-          <li key={4} style={{ width: 100 }}>
+          <li key={4} style={{ width: 200 }}>
             4
           </li>
-          <li key={5} style={{ width: 100 }}>
+          <li key={5} style={{ width: 200 }}>
             5
+          </li>
+          <li key={6} style={{ width: 200 }}>
+            6
+          </li>
+          <li key={7} style={{ width: 200 }}>
+            7
+          </li>
+          <li key={8} style={{ width: 200 }}>
+            8
           </li>
         </Carousel>
       </storeContext.Provider>
