@@ -21,13 +21,17 @@ const Carousel: React.FC<ICarousel> = ({
   const [index, setIndex] = useState<number>(0);
 
   return (
-    <div className="carousel-container" ref={ref}>
-      <div
-        className="carousel"
-      >
-        {children}
+    <>
+      <div className="carousel-root">
+        <div className="carousel-controller carousel-controller--next"></div>
+        <div className="carousel-controller carousel-controller--prev"></div>
+        <div className="carousel-container" ref={ref}>
+          <div className="carousel">
+            {children}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
